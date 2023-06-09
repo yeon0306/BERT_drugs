@@ -19,7 +19,7 @@ def main():
     writer = SummaryWriter()
     # 파일 불러오기
     path = "birthcontrol_2000.csv"
-    df = pd.read_csv(path, encoding="cp949")
+    df = pd.read_csv(path, encoding="UTF-8")
     data_X = df['review'].values   # 문장 컬럼
     labels = df['label'].values     # 라벨 컬럼
     print("### 데이터 ###")
@@ -154,7 +154,7 @@ def main():
     writer.close()
     # 모델 저장
     print('\nSave Model')
-    save_path = 'bert_model2'
+    save_path = 'bert_drugs_model'
     model.save_pretrained(save_path + '.pt')
     # torch.save(model, 'model.pt')
     print("\nfinish")
