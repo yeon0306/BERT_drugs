@@ -16,7 +16,7 @@ def main():
 
     # 파일 불러오기
     path = "birthcontrol_2000.csv"
-    df = pd.read_csv(path, encoding="cp949")
+    df = pd.read_csv(path, encoding="UTF-8")
     data_X = df['review'].values   # 문장 컬럼
     labels = df['label'].values     # 라벨 컬럼
     print("### 데이터 ###")
