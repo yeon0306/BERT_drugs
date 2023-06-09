@@ -7,14 +7,14 @@ import pandas as pd
 
 def main():
     # 모델명
-    model = 'bert_model.pt'
+    model = 'bert_drugs_model.pt'
 
     # Test
     df = pd.read_csv("drugs_raw31.csv", encoding="UTF-8")
     sentences = df['review'].values
     labels = df['label'].values
 
-    sentence = sentences[:100]
+    review = sentences[:100]
     label = labels[:100]
 
 
