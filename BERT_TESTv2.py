@@ -12,7 +12,7 @@ import datetime
 
 def main():
     # 모델명
-    model = 'bert_model.pt'
+    model = 'bert_drugs_model.pt'
     model = MobileBertForSequenceClassification.from_pretrained(model)
     model.eval()
     # Test
